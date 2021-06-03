@@ -22,10 +22,13 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
     "babel-preset-preact": "^2.0.0",
+    "css-loader": "^5.2.6",
+    "style-loader": "^2.0.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "preact": "^10.5.13"
   }
 }

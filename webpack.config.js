@@ -2,8 +2,8 @@ module.exports = {
   mode: "production",
   entry: './src/main/js/entry.js',
   output: {
-      path: `${__dirname}/src/main/resources/static/common/js`,
-      filename: 'main.js'
+    path: `${__dirname}/src/main/resources/static/common/js`,
+    filename: 'main.js'
   },
   module: {
     rules: [
@@ -14,10 +14,20 @@ module.exports = {
             loader: "babel-loader",
             options: {
               presets: [
-                  "@babel/preset-env",
-                  "preact"
+                "@babel/preset-env",
+                "preact"
               ]
             }
+          }
+        ]
+      },
+      {
+        test: /\.css/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: { url: false }
           }
         ]
       }
