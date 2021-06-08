@@ -8,7 +8,50 @@
     <title>Document</title>
 </head>
 <body>
-  <h1 th:text="${message}"></h1>
+  <div class="wrapper">
+    <header>
+      <h1 class="header-title">
+        <span><img loading="lazy" src="https://avatars.githubusercontent.com/u/24907348?s=300" alt="Kato83"></span>
+        <span>Kato83</span>
+      </h1>
+    </header>
+    <main>
+      <section>
+        <h2>Biography</h2>
+        <ul class="biography-list">
+          <li>
+            <p class="biography-head"><time datetime="2021-06">2021年6月</time></p>
+            <div class="biography-body">
+              <h3>当サイトを公開</h3>
+              <p>Spring Framework x Preact<small>※</small>で実装し、Docker コンテナで公開しています。<br />
+                <small>※Preact: Reactのサブセットライブラリ</small></p>
+            </div>
+          </li>
+          <li>
+            <p class="biography-head"><time datetime="2018-04">2018年4月</time></p>
+            <div class="biography-body">
+              <h3>都内Web制作会社でバックエンドエンジニアとして就職</h3>
+              <p>機能要件に基づいたWebアプリケーションの開発やCMSカスタマイズをメインの生業としています。</p>
+              <p>入社当時、配属先がバックエンド開発だったものの、Reactなどを用いたフロントエンド開発なども行っています。</p>
+            </div>
+          </li>
+          <li>
+            <p class="biography-head"><time datetime="2018-03">2018年3月</time></p>
+            <div class="biography-body">
+              <h3>都内専門学校 Web科卒業</h3>
+              <p>Web学科で基礎的なマークアップとプログラム、デザインについて学ぶ。学園祭のコンセプトデザインに採用され、特設サイト実装し公開しました。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Articles</h2>
+      </section>
+    </main>
+    <footer>
+      <small>&copy; 2020 pu10g.com</small>
+    </footer>
+  </div>
   <script src="/common/js/main.js"></script>
 </body>
 </html>

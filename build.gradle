@@ -38,6 +38,10 @@ task webpack(type: NpmTask) {
   args = ['run', 'webpack']
 }
 
+task webpackWatch(type: NpmTask) {
+  args = ['run', 'webpack-w']
+}
+
 // build docker image depends on webpack build
 bootBuildImage.dependsOn(webpack)
 

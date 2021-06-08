@@ -1,0 +1,90 @@
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #333;
+  background: #f7ffe9;
+}
+
+p {
+  line-height: 1.75;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+.wrapper .header-title {
+  text-align: center;
+  padding: 5rem 0 5rem;
+  border-bottom: solid 1px #c9cfbd;
+}
+
+.wrapper .header-title img {
+  display: block;
+  max-width: calc(7rem + 2.5vw);
+  padding: .25rem;
+  border-radius: 50%;
+  box-shadow: -15px -15px 30px #aab0a1, 15px 15px 30px #ffffff;
+  margin: 0 auto 2rem;
+}
+
+.wrapper section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wrapper main {
+  max-width: 40rem;
+  margin: auto;
+}
+
+.wrapper section {
+  padding: 1rem;
+}
+
+.wrapper section h2::after {
+  content: "";
+  display: block;
+  margin: 1rem auto 0;
+  width: 2rem;
+  height: .2rem;
+  background: #000;
+  text-align: center;
+}
+
+.wrapper .biography-list {
+  list-style: none;
+}
+
+.wrapper .biography-list>li {
+  margin-bottom: 60px;
+}
+
+@media ( min-width: 640px) {
+  .wrapper .biography-list>li {
+    overflow: hidden;
+    margin: 0;
+  }
+  .wrapper .biography-head {
+    float: left;
+    margin: 20px 20px 0 0;
+    min-width: 6rem;
+  }
+  .wrapper .biography-body {
+    width: calc(100% - 10rem);
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding-left: 30px;
+    position: relative;
+  }
+  .wrapper .biography-body:before {
+    content: "\2022";
+    font-size: 60px;
+    position: absolute;
+    left: -12px;
+    color: #b28fff;
+  }
+}
+
+footer {
+  text-align: center;
+}
