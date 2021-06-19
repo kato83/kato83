@@ -1,7 +1,35 @@
+html{
+  scroll-behavior: smooth;
+  }
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: #333;
-  background: #f7ffe9;
+  background: #fdfff9;
+  scroll-behavior: smooth;
+  animation: fadeIn 2s ease 0s 1 normal;
+}
+
+* {
+  font-weight: normal;
+}
+
+::selection {
+  background: #b5c785;
+  color: #fdfff9;
+}
+
+::-moz-selection {
+  background: #b5c785;
+  color: #fdfff9;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
 }
 
 p {
@@ -15,7 +43,6 @@ p:last-of-type {
 .wrapper .header-title {
   text-align: center;
   padding: 5rem 0 5rem;
-  border-bottom: solid 1px #c9cfbd;
 }
 
 .wrapper .header-title img {
@@ -53,38 +80,70 @@ p:last-of-type {
 
 .wrapper .biography-list {
   list-style: none;
+  padding: 0;
 }
 
 .wrapper .biography-list>li {
   margin-bottom: 60px;
 }
 
+.wrapper .biography-body h3 {
+  font-weight: bold;
+}
+
 @media ( min-width: 640px) {
   .wrapper .biography-list>li {
-    overflow: hidden;
+    display: flex;
     margin: 0;
   }
   .wrapper .biography-head {
-    float: left;
     margin: 20px 20px 0 0;
     min-width: 6rem;
   }
   .wrapper .biography-body {
     width: calc(100% - 10rem);
-    float: left;
     border-left: 3px #e5e5d1 solid;
     padding-left: 30px;
     position: relative;
+    padding-bottom: 3rem;
+  }
+  .wrapper .biography-list>li:last-of-type .biography-body {
+    padding-bottom: 1rem;
   }
   .wrapper .biography-body:before {
     content: "\2022";
     font-size: 60px;
     position: absolute;
     left: -12px;
-    color: #b28fff;
+    color: #e1ff8f;
   }
 }
 
 footer {
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.works{
+  display: flex;
+  justify-content: space-between;
+}
+
+.to-top{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+}
+.to-top:active{
+  color: inherit;
+}
+.material-icons{
+  font-family: 'Material Icons';
 }
