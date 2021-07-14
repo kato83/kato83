@@ -1,6 +1,7 @@
-html{
+html {
   scroll-behavior: smooth;
-  }
+}
+
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: #333;
@@ -83,7 +84,7 @@ p:last-of-type {
   padding: 0;
 }
 
-.wrapper .biography-list>li {
+.wrapper .biography-list > li {
   margin-bottom: 60px;
 }
 
@@ -92,14 +93,16 @@ p:last-of-type {
 }
 
 @media ( min-width: 640px) {
-  .wrapper .biography-list>li {
+  .wrapper .biography-list > li {
     display: flex;
     margin: 0;
   }
+
   .wrapper .biography-head {
     margin: 20px 20px 0 0;
     min-width: 6rem;
   }
+
   .wrapper .biography-body {
     width: calc(100% - 10rem);
     border-left: 3px #e5e5d1 solid;
@@ -107,9 +110,11 @@ p:last-of-type {
     position: relative;
     padding-bottom: 3rem;
   }
-  .wrapper .biography-list>li:last-of-type .biography-body {
+
+  .wrapper .biography-list > li:last-of-type .biography-body {
     padding-bottom: 1rem;
   }
+
   .wrapper .biography-body:before {
     content: "\2022";
     font-size: 60px;
@@ -124,12 +129,30 @@ footer {
   margin-bottom: 1rem;
 }
 
-.works{
+.works {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.to-top{
+.works > div {
+  padding: 1rem;
+  flex-basis: 100%;
+}
+
+@media ( min-width: 640px) {
+  .works {
+    flex-wrap: nowrap;
+  }
+}
+
+.works > div > .material-icons {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+.to-top {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -141,9 +164,12 @@ footer {
   text-decoration: none;
 
 }
-.to-top:active{
+
+.to-top:active {
   color: inherit;
 }
-.material-icons{
+
+.material-icons {
   font-family: 'Material Icons';
 }
+
