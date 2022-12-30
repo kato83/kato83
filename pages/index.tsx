@@ -58,9 +58,9 @@ export default function Home() {
       <section>
         <h1 className={`${montserrat.className} ${styles.heading}`}>Link</h1>
         <ul>
-          <li><a href="https://github.com/kato83" rel="noopener" target="_blank">GitHub</a></li>
-          <li><a href="https://twitter.com/http_kato83" rel="noopener" target="_blank">Twitter</a></li>
-          <li><a href="https://www.pu10g.com" rel="noopener" target="_blank">Blog</a></li>
+          <li><a href="https://github.com/kato83" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          <li><a href="https://twitter.com/http_kato83" rel="noopener noreferrer" target="_blank">Twitter</a></li>
+          <li><a href="https://www.pu10g.com" rel="noopener noreferrer" target="_blank">Blog</a></li>
         </ul>
       </section>
     </main>
