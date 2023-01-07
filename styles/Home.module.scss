@@ -33,12 +33,21 @@
   &Item {
     flex-grow: 1;
     flex-basis: 40%;
-    font-size: calc((100vw - 320px) / 140 + 1rem);
+    font-size: calc((100vw - 320px) / 140 + .75rem);
     padding: .5rem 1rem;
     border-radius: .5rem;
     background: transparent;
     box-shadow: 6px 6px 12px #abc294,
       -6px -6px 12px #f7ffd4;
+    a {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      span {
+        padding-top: 2px;
+      }
+    }
   }
 }
 
