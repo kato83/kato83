@@ -1,60 +1,42 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import { Montserrat } from '@next/font/google'
-import styles from '../styles/Home.module.scss'
-import footer from '../styles/Footer.module.scss';
-import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import styles from '@/styles/Home.module.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  return <>
-    <Head>
-      <title>KATO83</title>
-      <meta name="description" content="Kato83's portfolio site" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <main className={styles.main}>
-      <div className={`${montserrat.className} ${styles.mainVisual}`}>
-        <img className={styles.mainVisualImage}
-          src="https://avatars.githubusercontent.com/u/24907348?s=144"
-          width="72"
-          height="72"
-          alt="portfolio profile image" />
-        <span className={styles.mainVisualText}>KATO83</span>
-      </div>
-      <ul className={styles.nav}>
-        <li className={`${styles.navItem} ${montserrat.className}`}>
-          <a href="https://github.com/kato83" rel="noopener noreferrer" target="_blank">
-            <FontAwesomeIcon icon={faGithub} style={{width: '1.25rem'}} />
-            <span>GitHub</span>
-          </a>
-        </li>
-        <li className={`${styles.navItem} ${montserrat.className}`}>
-          <a href="https://twitter.com/http_kato83" rel="noopener noreferrer" target="_blank">
-            <FontAwesomeIcon icon={faTwitter} style={{width: '1.25rem'}} />
-            <span>Twitter</span>
-          </a>
-        </li>
-        <li className={`${styles.navItem} ${montserrat.className}`}>
-          <a href="https://www.pu10g.com" rel="noopener noreferrer" target="_blank">
-            <FontAwesomeIcon icon={faGlobe} style={{width: '1.25rem'}} />
-            <span>Blog</span>
-          </a>
-        </li>
-        <li className={`${styles.navItem} ${montserrat.className}`}>
-          <a href="https://qiita.com/http_kato83" rel="noopener noreferrer" target="_blank">
-          <FontAwesomeIcon icon={faGlobe} style={{width: '1.25rem'}} />
-            <span>Qiita</span>
-          </a>
-        </li>
-      </ul>
-      <section className={styles.section}>
-        <h1 className={`${montserrat.className} ${styles.heading}`}>About</h1>
+  return (
+    <>
+      <Head>
+        <title>KATO83</title>
+        <meta name="description" content="KATO83's portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main>
+        <section className={styles.mainVisual}>
+          <Image src={'mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
+          <div className={styles.nameCard}>
+            <h1 className={styles.nameCard__heading}>
+              <ruby className={styles.nameCard__firstName}>加藤<rt>Kato</rt></ruby><ruby className={styles.nameCard__lastName}>友樹<rt>Yuki</rt></ruby>
+            </h1>
+            <div className={styles.nameCard__meta}>
+              <div className={styles.nameCard__blog}><FontAwesomeIcon title='Blog' icon={faGlobe} style={{ width: '1.25rem' }} />
+                {' '}<a href="https://www.pu10g.com" target='_blank' rel='noopener'>www.pu10g.com</a>
+              </div>
+              <div className={styles.nameCard__github}><FontAwesomeIcon title='GitHub' icon={faGithub} style={{ width: '1.25rem' }} />
+                {' '}<a href="https://github.com/kato83" target='_blank' rel='noopener'>@kato83</a></div>
+              <div className={styles.nameCard__twitter}><FontAwesomeIcon title='Twitter' icon={faTwitter} style={{ width: '1.25rem' }} />
+                {' '}<a href="https://twitter.com/http_kato83" target='_blank' rel='noopener'>@http_kato83</a></div>
+            </div>
+          </div>
+        </section>
+        <section className={styles.section}>
+        <h1 className={styles.heading}>About</h1>
         <p className={styles.aboutParagraph}>都内専門学校 Web 科卒業の後、2018年度より株式会社キノトロープでアシスタントバックエンドエンジニアとして新卒入社。</p>
         <p className={styles.aboutParagraph}>現在はバックエンドエンジニア兼 SE として従事。</p>
         <p className={styles.aboutParagraph}>社内リソースに応じて適宜フロントエンドの業務や AWS 上での環境構築も行っています。</p>
@@ -71,7 +53,7 @@ export default function Home() {
         </dl>
       </section>
       <section className={styles.section}>
-        <h1 className={`${montserrat.className} ${styles.heading}`}>Skils</h1>
+        <h1 className={styles.heading}>Skils</h1>
         <h2>Backend</h2>
         <p>Java, Scala, PHP, MySQL<br/>
         Docker, Spring Boot, Drupal 8-, Laravel Linux (RHEL, Ubuntu, etc.)</p>
@@ -82,7 +64,7 @@ export default function Home() {
         <p>設計, 要件定義, 非機能要件, AWS (EC2, ELB, RDS, S3, Dynamo DB, CloudSearch), etc.</p>
       </section>
       <section className={styles.section}>
-        <h1 className={`${montserrat.className} ${styles.heading}`}>Works</h1>
+        <h1 className={styles.heading}>Works</h1>
         <ul>
           <li>
             <h2>複数案件での大規模サイトの構築、改修</h2>
@@ -107,20 +89,11 @@ export default function Home() {
           </li>
         </ul>
       </section>
-    </main>
-    <Footer />
-  </>
+      </main>
+    </>
+  )
 }
 
-type FooterProps = React.ComponentProps<'footer'>;
-export function Footer({ className = '', ...props }: FooterProps) {
-  return <>
-    <footer {...props}
-      className={`${className} ${footer.footer} ${montserrat.className}`.trim()}>
-      <small>&copy;2022- KATO83.</small>
-    </footer>
-  </>
-}
 
 /**
  * 年齢計算
