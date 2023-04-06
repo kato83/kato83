@@ -65,7 +65,6 @@ export default function Home() {
           <button onClick={onClick} onTransitionEnd={end} className={styles.nameCardRotate} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
         </section>
         <section className={styles.section}>
-          <button onClick={open}>OPEN</button>
           <Modal>
             <div className={styles.modal}>
               {modalType === 'QR' ? <div style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}>
