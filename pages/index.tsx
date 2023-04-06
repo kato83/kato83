@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobe, faRotate } from "@fortawesome/free-solid-svg-icons"
+import { faGlobe, faRotate, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import React, { useState } from 'react'
 import { useModal } from 'react-hooks-use-modal'
@@ -11,9 +11,9 @@ export default function Home() {
 
   const [deg, setDeg] = useState(0);
   const [modalType, setModalType] = useState('');
-  const onClick = (_: React.MouseEvent<HTMLButtonElement, MouseEvent>) => setDeg(deg === 0 ? 180 : 0);
+  const onClick = (_: React.MouseEvent<HTMLButtonElement, MouseEvent>) => setDeg(deg + 180);
   const [Modal, open, close, isOpen] = useModal('modal', {
-    preventScroll: true,
+    preventScroll: false,
     focusTrapOptions: {
       clickOutsideDeactivates: true,
     },
@@ -61,18 +61,18 @@ export default function Home() {
                 {' '}<a href="https://twitter.com/http_kato83" target='_blank' rel='noopener'>@http_kato83</a></div>
             </div>
           </div>
-          <button onClick={onClick} className={styles.nameCardRotate} data-is-rotate={deg === 180 ? 'true' : 'false'}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
+          <button onClick={onClick} className={styles.nameCardRotate} style={{ transform: `rotate(${deg}deg)` }}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
         </section>
         <section className={styles.section}>
           <button onClick={open}>OPEN</button>
           <Modal>
             <div className={styles.modal}>
-              {modalType === 'QR' ? <>
+              {modalType === 'QR' ? <div style={{ transform: `rotate(${deg}deg)` }}>
                 <div style={{ marginBottom: '1rem', textAlign: 'right' }}>
-                  <button onClick={close}>CLOSE</button>
+                  <button className={styles.modal__close} onClick={close} aria-label='CLOSE'><FontAwesomeIcon title='CLOSE' icon={faXmark} style={{ width: '1.25rem' }} /></button>
                 </div>
                 <Image src={'qr.svg'} alt="QRコード" width={123} height={123} className={styles.modalQrImage} />
-              </>
+              </div>
                 : <></>}
             </div>
           </Modal>

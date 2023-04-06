@@ -103,6 +103,7 @@
       margin-left: auto;
       display: flex;
       justify-content: flex-end;
+      cursor: pointer;
 
       img {
         display: block;
@@ -146,10 +147,6 @@
   transition: all ease .5s;
   transform: rotate(0deg);
   line-height: 0;
-
-  &[data-is-rotate=true] {
-    transform: rotate(180deg);
-  }
 }
 
 .definition {
@@ -221,6 +218,14 @@
   background: #fff;
   padding: 1.5rem;
   margin: 1rem;
+
+  &__close {
+    background: none;
+    color: #474747;
+    padding: 0 .5rem;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .modalQrImage {
