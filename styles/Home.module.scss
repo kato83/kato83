@@ -5,9 +5,11 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  flex-direction: column;
   position: relative;
   padding: 1rem .5rem 2rem;
   margin-bottom: 2rem;
+  overflow: hidden;
 
   @media screen and (max-width: 20rem) {
     min-height: inherit;
@@ -39,6 +41,37 @@
   writing-mode: vertical-rl;
   animation: fadeIn 2s ease 0s 1 normal;
   overflow: hidden;
+  transition: all ease .5s;
+
+  &::before, &::after {
+    transition: all ease .5s;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &.rotate::before {
+    background-color: #fff;
+    transform: skewX(30deg);
+    border-radius: 0 0 50% 50%;
+  }
+
+  &.rotate::after {
+    background-color: #fff;
+    transform: skewX(-30deg);
+    border-radius: 0 0 50% 50%;
+  }
 
   @media screen and (max-width: 20rem) {
     border: none;
@@ -83,6 +116,21 @@
 
   &__lastName {
     padding-top: 1rem;
+  }
+}
+
+.nameCardRotate {
+  position: relative;
+  padding: .5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all ease .5s;
+  transform: rotate(0deg);
+  line-height: 0;
+
+  &[data-is-rotate=true] {
+    transform: rotate(180deg);
   }
 }
 
@@ -143,4 +191,10 @@
   &>* {
     margin-bottom: 1rem;
   }
+}
+
+.footer {
+  text-align: center;
+  background: var(--background-color);
+  padding: 1rem;
 }

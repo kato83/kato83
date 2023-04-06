@@ -2,10 +2,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+import { faGlobe, faRotate } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import React, { useState } from 'react'
 
 export default function Home() {
+
+  const [deg, setDeg] = useState(0);
+  const onClick = (_: React.MouseEvent<HTMLButtonElement, MouseEvent>) => setDeg(deg === 0 ? 180 : 0);
+
   return (
     <>
       <Head>
@@ -27,7 +32,7 @@ export default function Home() {
       <main>
         <section className={styles.mainVisual}>
           <Image src={'mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
-          <div className={styles.nameCard}>
+          <div className={`${styles.nameCard} ${deg === 180 ? styles.rotate : ''}`} style={{ transform: `rotate(${deg}deg)` }}>
             <h1 className={styles.nameCard__heading}>
               <ruby className={styles.nameCard__firstName}>加藤<rt lang='en'>Kato</rt></ruby><ruby className={styles.nameCard__lastName}>友樹<rt lang='en'>Yuki</rt></ruby>
             </h1>
@@ -41,6 +46,7 @@ export default function Home() {
                 {' '}<a href="https://twitter.com/http_kato83" target='_blank' rel='noopener'>@http_kato83</a></div>
             </div>
           </div>
+          <button onClick={onClick} className={styles.nameCardRotate} data-is-rotate={deg === 180 ? 'true' : 'false'}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
         </section>
         <section className={styles.section}>
           <h1 className={styles.heading}>About</h1>
@@ -103,6 +109,9 @@ export default function Home() {
           </ul>
         </section>
       </main>
+      <footer className={styles.footer}>
+        <small>&copy; 2023, KATO83 All rights reserved.</small>
+      </footer>
     </>
   )
 }
