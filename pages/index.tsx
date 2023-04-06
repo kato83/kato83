@@ -5,11 +5,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe, faRotate } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import React, { useState } from 'react'
+import { useModal } from 'react-hooks-use-modal'
 
 export default function Home() {
 
   const [deg, setDeg] = useState(0);
+  const [modalType, setModalType] = useState('');
   const onClick = (_: React.MouseEvent<HTMLButtonElement, MouseEvent>) => setDeg(deg === 0 ? 180 : 0);
+  const [Modal, open, close, isOpen] = useModal('modal', {
+    preventScroll: true,
+    focusTrapOptions: {
+      clickOutsideDeactivates: true,
+    },
+  });
+  const openQrCode = (_: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
+    setModalType('QR');
+    open();
+  }
 
   return (
     <>
@@ -38,7 +50,7 @@ export default function Home() {
             </h1>
             <div className={styles.nameCard__meta}>
               <div className={styles.nameCard__qr}>
-                <Image src={'qr.svg'} alt="QRコード" width={123} height={123} />
+                <Image src={'qr.svg'} alt="QRコード" width={123} height={123} onClick={openQrCode} />
               </div>
               <div className={styles.nameCard__blog}><FontAwesomeIcon title='Blog' icon={faGlobe} style={{ width: '1.25rem' }} />
                 {' '}<a href="https://www.pu10g.com" target='_blank' rel='noopener'>www.pu10g.com</a>
@@ -52,6 +64,18 @@ export default function Home() {
           <button onClick={onClick} className={styles.nameCardRotate} data-is-rotate={deg === 180 ? 'true' : 'false'}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
         </section>
         <section className={styles.section}>
+          <button onClick={open}>OPEN</button>
+          <Modal>
+            <div className={styles.modal}>
+              {modalType === 'QR' ? <>
+                <div style={{ marginBottom: '1rem', textAlign: 'right' }}>
+                  <button onClick={close}>CLOSE</button>
+                </div>
+                <Image src={'qr.svg'} alt="QRコード" width={123} height={123} className={styles.modalQrImage} />
+              </>
+                : <></>}
+            </div>
+          </Modal>
           <h1 className={styles.heading}>About</h1>
           <p className={styles.aboutParagraph}>東京電子専門学校 ウェブ・メディア科卒業の後、2018年度より株式会社キノトロープでアシスタントバックエンドエンジニアとして新卒入社。</p>
           <p className={styles.aboutParagraph}>現在は SE 及びバックエンド開発をメインとしていますが、社内リソースに応じて適宜フロントエンドの業務や AWS 上での環境構築も行っています。</p>
@@ -115,6 +139,7 @@ export default function Home() {
       <footer className={styles.footer}>
         <small>&copy; 2023, KATO83 All rights reserved.</small>
       </footer>
+      <div id='modal'></div>
     </>
   )
 }

@@ -216,3 +216,15 @@
   background: var(--background-color);
   padding: 1rem;
 }
+
+.modal {
+  background: #fff;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.modalQrImage {
+  width: 100%;
+  max-width: 15rem;
+  height: inherit;
+}
