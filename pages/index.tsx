@@ -44,14 +44,14 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.mainVisual}>
-          <Image src={'mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
+          <Image src={'/mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
           <div className={`${styles.nameCard} ${deg === 180 ? styles.rotate : ''}`} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}>
             <h1 className={styles.nameCard__heading}>
               <ruby className={styles.nameCard__firstName}>加藤<rt lang='en'>Kato</rt></ruby><ruby className={styles.nameCard__lastName}>友樹<rt lang='en'>Yuki</rt></ruby>
             </h1>
             <div className={styles.nameCard__meta}>
               <div className={styles.nameCard__qr}>
-                <Image src={'qr.svg'} alt="QRコード" width={123} height={123} onClick={openQrCode} />
+                <Image src={'/qr.svg'} alt="QRコード" width={123} height={123} onClick={openQrCode} />
               </div>
               <div className={styles.nameCard__blog}><FontAwesomeIcon title='Blog' icon={faGlobe} style={{ width: '1.25rem' }} />
                 {' '}<a href="https://www.pu10g.com" target='_blank' rel='noopener'>www.pu10g.com</a>
@@ -101,8 +101,18 @@ export default function Home() {
         <section className={styles.section}>
           <h1 className={styles.heading}>Skils</h1>
           <h2>Backend</h2>
-          <p>Java, Scala, PHP, MySQL<br />
-            Docker, Spring Boot, Drupal 8-, Laravel, Linux (RHEL, Ubuntu, etc.)</p>
+          <div className={styles.card}>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/java.webp' alt='java' width={400} height={400} /></div><div className={styles.card__text}><h3>Java <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/scala.webp' alt='scala' width={400} height={400} /></div><div className={styles.card__text}><h3>Scala <small>(☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/php.webp' alt='php' width={400} height={400} /></div><div className={styles.card__text}><h3>PHP <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/mysql.webp' alt='mysql' width={400} height={400} /></div><div className={styles.card__text}><h3>MySQL <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/docker.webp' alt='docker' width={400} height={400} /></div><div className={styles.card__text}><h3>Docker <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/springboot.webp' alt='spring boot' width={400} height={400} /></div><div className={styles.card__text}><h3>Spring Boot <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/drupal.webp' alt='drupal' width={400} height={400} /></div><div className={styles.card__text}><h3>Drupal <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/laravel.webp' alt='laravel' width={400} height={400} /></div><div className={styles.card__text}><h3>Laravel <small>(☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/linux.webp' alt='linux' width={400} height={400} /></div><div className={styles.card__text}><h3>Linux <small>(☆☆)</small></h3></div></div>
+          </div>
+          {/* RHEL, Ubuntu, etc. */}
           <h2>Frontend</h2>
           <p>TypeScript, JavaScript, HTML, CSS<br />
             React, Vue, SCSS, webpack, jQuery, Pug</p>
