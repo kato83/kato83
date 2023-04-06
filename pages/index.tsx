@@ -19,12 +19,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="favicon.ico" />
         {/* OGP */}
-        <meta property="og:url" content="https://kato83.github.io/kato83/" />
+        <meta property="og:url" content="https://portfolio.pu10g.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="KATO83" />
         <meta property="og:description" content="KATO83's portfolio" />
         <meta property="og:site_name" content="KATO83" />
-        <meta property="og:image" content="https://kato83.github.io/kato83/icon.jpg" />
+        <meta property="og:image" content="https://portfolio.pu10g.com/icon.jpg" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@http_kato83" />
         <meta name="twitter:creator" content="@http_kato83" />
