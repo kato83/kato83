@@ -6,7 +6,6 @@ import { faGlobe, faRotate, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import React, { useState } from 'react'
 import { useModal } from 'react-hooks-use-modal'
-import { log } from 'console'
 
 export default function Home() {
 
