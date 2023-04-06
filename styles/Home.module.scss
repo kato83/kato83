@@ -1,16 +1,16 @@
 .mainVisual {
-  height: 100vh;
-  height: 100lvh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   position: relative;
-  padding: .5rem;
+  padding: 1rem .5rem 2rem;
   margin-bottom: 2rem;
 
   @media screen and (max-width: 20rem) {
-    height: inherit;
+    min-height: inherit;
     padding: 0;
   }
 
@@ -30,12 +30,11 @@
   border: double 1px #aaaaaa;
   border-radius: .5rem;
   padding: 1rem;
-  background-color: #aad4c7;
-  box-shadow: .125rem .125rem .25rem #aaaaaa, inset 0 0 30px #c8e4db;
+  background-color: var(--background-color);
+  box-shadow: .125rem .125rem .25rem #aaaaaa, inset 0 0 20rem rgba(231, 231, 231, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: #474747;
   position: relative;
   writing-mode: vertical-rl;
   animation: fadeIn 2s ease 0s 1 normal;
@@ -53,7 +52,7 @@
     0% {
       top: 5rem;
     }
-  
+
     100% {
       top: 0;
     }
@@ -84,5 +83,64 @@
 
   &__lastName {
     padding-top: 1rem;
+  }
+}
+
+.definition {
+  display: table;
+
+  &__item {
+    display: table-row;
+
+    dt,
+    dd {
+      display: table-cell;
+    }
+
+    dt>div {
+      margin: 0 .5rem .5rem 0;
+      background-color: var(--background-color);
+      padding: .25rem .5rem;
+      font-weight: bold;
+      text-align: justify;
+      text-align-last: justify;
+      text-justify: inter-character;
+      white-space: nowrap;
+    }
+  }
+}
+
+.section {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  max-width: 40rem;
+  margin: auto;
+
+  p {
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: '';
+      width: 3rem;
+      height: .125rem;
+      background: var(--bark-accent-color);
+      margin: .5rem auto 0;
+    }
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
+
+  &>* {
+    margin-bottom: 1rem;
   }
 }

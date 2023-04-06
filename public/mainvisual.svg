@@ -12,8 +12,7 @@
 
     #green {
       fill: none;
-      opacity: 0.15;
-      stroke: #1bce83;
+      stroke: #ddffbb;
       stroke-width: 12;
       stroke-miterlimit: 10;
       animation: show 4s;
@@ -24,8 +23,7 @@
 
     #blue {
       fill: none;
-      opacity: 0.15;
-      stroke: #06A1C4;
+      stroke:#c7e9b0;
       stroke-width: 12;
       stroke-miterlimit: 10;
       animation: show 4s;
@@ -36,8 +34,7 @@
 
     #light-blue {
       fill: none;
-      opacity: 0.15;
-      stroke: #06A1C4;
+      stroke: #b3c99c;
       stroke-width: 6;
       stroke-miterlimit: 10;
       stroke-dasharray: 200;
@@ -56,15 +53,15 @@
 
     @keyframes show {
       0% {
-        opacity: 0.15;
+        opacity: 0.75;
       }
 
       50% {
-        opacity: 0.2;
+        opacity: 1;
       }
 
       100% {
-        opacity: 0.15;
+        opacity: 0.75;
       }
     }
   </style>

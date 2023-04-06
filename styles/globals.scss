@@ -4,8 +4,15 @@
   margin: 0;
 }
 
+:root {
+  --light-accent-color: #ddffbb;
+  --background-color: #c7e9b0;
+  --bark-accent-color: #b3c99c;
+  --base-color: #a4bc92;
+}
+
 ::selection {
-  background-color: #5ec7a6;
+  background-color: var(--base-color);
   color: #ffffff;
 }
 
@@ -15,6 +22,8 @@ a {
 }
 
 body {
+  color: #474747;
+  background-color: #fdfdfd;
   animation: fadeIn 2s ease 0s 1 normal;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
@@ -26,21 +35,5 @@ body {
 
   100% {
     opacity: 1
-  }
-}
-
-// 仮
-
-section:nth-child(n + 2) {
-  margin-bottom: 3rem;
-  padding: 1rem;
-  max-width: 70rem;
-  margin: auto;
-
-  ul {
-    margin-left: 1rem;
-  }
-  & > * {
-    margin-bottom: 1rem;
   }
 }
