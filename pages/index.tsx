@@ -114,8 +114,18 @@ export default function Home() {
           </div>
           {/* RHEL, Ubuntu, etc. */}
           <h2>Frontend</h2>
-          <p>TypeScript, JavaScript, HTML, CSS<br />
-            React, Vue, SCSS, webpack, jQuery, Pug</p>
+          <div className={styles.card}>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/typescript.webp' alt='typescript' width={400} height={400} /></div><div className={styles.card__text}><h3>TypeScript <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/javascript.webp' alt='javascript' width={400} height={400} /></div><div className={styles.card__text}><h3>JavaScript <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/html5.webp' alt='html5' width={400} height={400} /></div><div className={styles.card__text}><h3>HTML5 <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/css.webp' alt='css' width={400} height={400} /></div><div className={styles.card__text}><h3>CSS <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/react.webp' alt='react' width={400} height={400} /></div><div className={styles.card__text}><h3>React <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/vue.webp' alt='vue boot' width={400} height={400} /></div><div className={styles.card__text}><h3>Vue.js <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/sass.webp' alt='sass' width={400} height={400} /></div><div className={styles.card__text}><h3>Sass <small>(☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/webpack.webp' alt='webpack' width={400} height={400} /></div><div className={styles.card__text}><h3>webpack <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/jquery.webp' alt='jquery' width={400} height={400} /></div><div className={styles.card__text}><h3>jQuery <small>(☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/pug.webp' alt='pug' width={400} height={400} /></div><div className={styles.card__text}><h3>Pug <small>(☆☆)</small></h3></div></div>
+          </div>
           <h2>Other</h2>
           <p>設計, 要件定義, 非機能要件, AWS (EC2, ELB, RDS, S3, Dynamo DB, CloudSearch), etc.</p>
         </section>
