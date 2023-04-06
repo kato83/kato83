@@ -43,7 +43,8 @@
   overflow: hidden;
   transition: all ease .5s;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     transition: all ease .5s;
     content: '';
     display: block;
@@ -94,8 +95,21 @@
   &__meta {
     margin-top: auto;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     gap: .25rem;
+
+    .nameCard__qr {
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        max-width: 4.5rem;
+        height: inherit;
+        border-radius: .25rem;
+      }
+    }
   }
 
   &__heading {

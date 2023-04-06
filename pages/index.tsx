@@ -31,12 +31,15 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.mainVisual}>
-          <Image src={'mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
+          <Image src={'/mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
           <div className={`${styles.nameCard} ${deg === 180 ? styles.rotate : ''}`} style={{ transform: `rotate(${deg}deg)` }}>
             <h1 className={styles.nameCard__heading}>
               <ruby className={styles.nameCard__firstName}>加藤<rt lang='en'>Kato</rt></ruby><ruby className={styles.nameCard__lastName}>友樹<rt lang='en'>Yuki</rt></ruby>
             </h1>
             <div className={styles.nameCard__meta}>
+              <div className={styles.nameCard__qr}>
+                <Image src={'/qr.png'} alt="QRコード" width={123} height={123} />
+              </div>
               <div className={styles.nameCard__blog}><FontAwesomeIcon title='Blog' icon={faGlobe} style={{ width: '1.25rem' }} />
                 {' '}<a href="https://www.pu10g.com" target='_blank' rel='noopener'>www.pu10g.com</a>
               </div>
