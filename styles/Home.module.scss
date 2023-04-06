@@ -105,9 +105,12 @@
       justify-content: flex-end;
 
       img {
-        max-width: 4.5rem;
-        height: inherit;
+        display: block;
         border-radius: .25rem;
+        background-color: #fff;
+        padding: .25rem;
+        max-width: 5rem;
+        height: inherit;
       }
     }
   }
@@ -134,6 +137,7 @@
 }
 
 .nameCardRotate {
+  color: #474747;
   position: relative;
   padding: .5rem;
   background: none;
