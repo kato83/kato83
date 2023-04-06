@@ -6,22 +6,24 @@ import { faGlobe, faRotate, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import React, { useState } from 'react'
 import { useModal } from 'react-hooks-use-modal'
+import { log } from 'console'
 
 export default function Home() {
 
   const [deg, setDeg] = useState(0);
   const [modalType, setModalType] = useState('');
-  const onClick = (_: React.MouseEvent<HTMLButtonElement, MouseEvent>) => setDeg(deg + 180);
+  const onClick = (_: React.MouseEvent<HTMLButtonElement>) => setDeg(deg + 180);
   const [Modal, open, close, isOpen] = useModal('modal', {
     preventScroll: false,
     focusTrapOptions: {
       clickOutsideDeactivates: true,
     },
   });
-  const openQrCode = (_: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
+  const openQrCode = (_: React.MouseEvent<HTMLImageElement>) => {
     setModalType('QR');
     open();
   }
+  const end = (_: React.TransitionEvent<HTMLButtonElement>) => setDeg(deg % 360 === 0 ? 0 : deg);
 
   return (
     <>
@@ -44,7 +46,7 @@ export default function Home() {
       <main>
         <section className={styles.mainVisual}>
           <Image src={'mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
-          <div className={`${styles.nameCard} ${deg === 180 ? styles.rotate : ''}`} style={{ transform: `rotate(${deg}deg)` }}>
+          <div className={`${styles.nameCard} ${deg === 180 ? styles.rotate : ''}`} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}>
             <h1 className={styles.nameCard__heading}>
               <ruby className={styles.nameCard__firstName}>加藤<rt lang='en'>Kato</rt></ruby><ruby className={styles.nameCard__lastName}>友樹<rt lang='en'>Yuki</rt></ruby>
             </h1>
@@ -61,13 +63,13 @@ export default function Home() {
                 {' '}<a href="https://twitter.com/http_kato83" target='_blank' rel='noopener'>@http_kato83</a></div>
             </div>
           </div>
-          <button onClick={onClick} className={styles.nameCardRotate} style={{ transform: `rotate(${deg}deg)` }}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
+          <button onClick={onClick} onTransitionEnd={end} className={styles.nameCardRotate} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
         </section>
         <section className={styles.section}>
           <button onClick={open}>OPEN</button>
           <Modal>
             <div className={styles.modal}>
-              {modalType === 'QR' ? <div style={{ transform: `rotate(${deg}deg)` }}>
+              {modalType === 'QR' ? <div style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}>
                 <div style={{ marginBottom: '1rem', textAlign: 'right' }}>
                   <button className={styles.modal__close} onClick={close} aria-label='CLOSE'><FontAwesomeIcon title='CLOSE' icon={faXmark} style={{ width: '1.25rem' }} /></button>
                 </div>
