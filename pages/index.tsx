@@ -12,7 +12,7 @@ export default function Home() {
   const [deg, setDeg] = useState(0);
   const [modalType, setModalType] = useState('');
   const onClick = (_: React.MouseEvent<HTMLButtonElement>) => setDeg(deg + 180);
-  const [Modal, open, close, isOpen] = useModal('modal', {
+  const [Modal, open, close] = useModal('modal', {
     preventScroll: false,
     focusTrapOptions: {
       clickOutsideDeactivates: true,
@@ -30,7 +30,7 @@ export default function Home() {
         <title>KATO83</title>
         <meta name="description" content="KATO83's portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         {/* OGP */}
         <meta property="og:url" content="https://portfolio.pu10g.com/" />
         <meta property="og:type" content="website" />
@@ -47,18 +47,18 @@ export default function Home() {
           <Image src={'/mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
           <div className={`${styles.nameCard} ${deg === 180 ? styles.rotate : ''}`} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}>
             <h1 className={styles.nameCard__heading}>
-              <ruby className={styles.nameCard__firstName}>加藤<rt lang='en'>Kato</rt></ruby><ruby className={styles.nameCard__lastName}>友樹<rt lang='en'>Yuki</rt></ruby>
+              <ruby>加藤<rt lang='en'>Kato</rt></ruby><ruby className={styles.nameCard__lastName}>友樹<rt lang='en'>Yuki</rt></ruby>
             </h1>
             <div className={styles.nameCard__meta}>
               <div className={styles.nameCard__qr}>
                 <Image src={'/qr.svg'} alt="QRコード" width={123} height={123} onClick={openQrCode} />
               </div>
-              <div className={styles.nameCard__blog}><FontAwesomeIcon title='Blog' icon={faGlobe} style={{ width: '1.25rem' }} />
+              <div><FontAwesomeIcon title='Blog' icon={faGlobe} style={{ width: '1.25rem' }} />
                 {' '}<a href="https://www.pu10g.com" target='_blank' rel='noopener'>www.pu10g.com</a>
               </div>
-              <div className={styles.nameCard__github}><FontAwesomeIcon title='GitHub' icon={faGithub} style={{ width: '1.25rem' }} />
+              <div><FontAwesomeIcon title='GitHub' icon={faGithub} style={{ width: '1.25rem' }} />
                 {' '}<a href="https://github.com/kato83" target='_blank' rel='noopener'>@kato83</a></div>
-              <div className={styles.nameCard__twitter}><FontAwesomeIcon title='Twitter' icon={faTwitter} style={{ width: '1.25rem' }} />
+              <div><FontAwesomeIcon title='Twitter' icon={faTwitter} style={{ width: '1.25rem' }} />
                 {' '}<a href="https://twitter.com/http_kato83" target='_blank' rel='noopener'>@http_kato83</a></div>
             </div>
           </div>
@@ -77,8 +77,8 @@ export default function Home() {
             </div>
           </Modal>
           <h1 className={styles.heading}>About</h1>
-          <p className={styles.aboutParagraph}>東京電子専門学校 ウェブ・メディア科卒業の後、2018年度より株式会社キノトロープでアシスタントバックエンドエンジニアとして新卒入社。</p>
-          <p className={styles.aboutParagraph}>現在は SE 及びバックエンド開発をメインとしていますが、社内リソースに応じて適宜フロントエンドの業務や AWS 上での環境構築も行っています。</p>
+          <p>東京電子専門学校 ウェブ・メディア科卒業の後、2018年度より株式会社キノトロープでアシスタントバックエンドエンジニアとして新卒入社。</p>
+          <p>現在は SE 及びバックエンド開発をメインとしていますが、社内リソースに応じて適宜フロントエンドの業務や AWS 上での環境構築も行っています。</p>
           <dl className={styles.definition}>
             <div className={styles.definition__item}>
               <dt><div>生まれ</div></dt>
@@ -102,29 +102,28 @@ export default function Home() {
           <h1 className={styles.heading}>Skils</h1>
           <h2>Backend</h2>
           <div className={styles.card}>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/java.webp' alt='java' width={400} height={400} /></div><div className={styles.card__text}><h3>Java <small>(☆☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/scala.webp' alt='scala' width={400} height={400} /></div><div className={styles.card__text}><h3>Scala <small>(☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/php.webp' alt='php' width={400} height={400} /></div><div className={styles.card__text}><h3>PHP <small>(☆☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/mysql.webp' alt='mysql' width={400} height={400} /></div><div className={styles.card__text}><h3>MySQL <small>(☆☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/docker.webp' alt='docker' width={400} height={400} /></div><div className={styles.card__text}><h3>Docker <small>(☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/springboot.webp' alt='spring boot' width={400} height={400} /></div><div className={styles.card__text}><h3>Spring Boot <small>(☆☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/drupal.webp' alt='drupal' width={400} height={400} /></div><div className={styles.card__text}><h3>Drupal <small>(☆☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/laravel.webp' alt='laravel' width={400} height={400} /></div><div className={styles.card__text}><h3>Laravel <small>(☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/linux.webp' alt='linux' width={400} height={400} /></div><div className={styles.card__text}><h3>Linux <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/java.webp' alt='java' width={250} height={404} /></div><div className={styles.card__text}><h3>Java <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/scala.webp' alt='scala' width={250} height={404} /></div><div className={styles.card__text}><h3>Scala <small>(☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/php.webp' alt='php' width={250} height={404} /></div><div className={styles.card__text}><h3>PHP <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/mysql.webp' alt='mysql' width={250} height={404} /></div><div className={styles.card__text}><h3>MySQL <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/docker.webp' alt='docker' width={250} height={404} /></div><div className={styles.card__text}><h3>Docker <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/spring.webp' alt='spring boot' width={250} height={404} /></div><div className={styles.card__text}><h3>Spring Boot <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/drupal.webp' alt='drupal' width={250} height={404} /></div><div className={styles.card__text}><h3>Drupal <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/laravel.webp' alt='laravel' width={250} height={404} /></div><div className={styles.card__text}><h3>Laravel <small>(☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/linux.webp' alt='linux' width={250} height={404} /></div><div className={styles.card__text}><h3>Linux <small>(☆☆)</small></h3></div></div>
           </div>
           {/* RHEL, Ubuntu, etc. */}
           <h2>Frontend</h2>
           <div className={styles.card}>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/typescript.webp' alt='typescript' width={400} height={400} /></div><div className={styles.card__text}><h3>TypeScript <small>(☆☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/javascript.webp' alt='javascript' width={400} height={400} /></div><div className={styles.card__text}><h3>JavaScript <small>(☆☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/html5.webp' alt='html5' width={400} height={400} /></div><div className={styles.card__text}><h3>HTML5 <small>(☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/css.webp' alt='css' width={400} height={400} /></div><div className={styles.card__text}><h3>CSS <small>(☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/react.webp' alt='react' width={400} height={400} /></div><div className={styles.card__text}><h3>React <small>(☆☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/vue.webp' alt='vue boot' width={400} height={400} /></div><div className={styles.card__text}><h3>Vue.js <small>(☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/sass.webp' alt='sass' width={400} height={400} /></div><div className={styles.card__text}><h3>Sass <small>(☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/webpack.webp' alt='webpack' width={400} height={400} /></div><div className={styles.card__text}><h3>webpack <small>(☆☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/jquery.webp' alt='jquery' width={400} height={400} /></div><div className={styles.card__text}><h3>jQuery <small>(☆)</small></h3></div></div>
-            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/pug.webp' alt='pug' width={400} height={400} /></div><div className={styles.card__text}><h3>Pug <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/typescript.webp' alt='typescript' width={250} height={404} /></div><div className={styles.card__text}><h3>TypeScript <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/javascript.webp' alt='javascript' width={250} height={404} /></div><div className={styles.card__text}><h3>JavaScript <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/html5.webp' alt='html5 & css' width={250} height={404} /></div><div className={styles.card__text}><h3>HTML & CSS <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/react.webp' alt='react' width={250} height={404} /></div><div className={styles.card__text}><h3>React <small>(☆☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/vue.webp' alt='vue' width={250} height={404} /></div><div className={styles.card__text}><h3>Vue.js <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/sass.webp' alt='sass' width={250} height={404} /></div><div className={styles.card__text}><h3>Sass <small>(☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/webpack.webp' alt='webpack' width={250} height={404} /></div><div className={styles.card__text}><h3>webpack <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/jquery.webp' alt='jquery' width={250} height={404} /></div><div className={styles.card__text}><h3>jQuery <small>(☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/pug.webp' alt='pug' width={250} height={404} /></div><div className={styles.card__text}><h3>Pug <small>(☆☆)</small></h3></div></div>
           </div>
           <h2>Other</h2>
           <p>設計, 要件定義, 非機能要件, AWS (EC2, ELB, RDS, S3, Dynamo DB, CloudSearch), etc.</p>
