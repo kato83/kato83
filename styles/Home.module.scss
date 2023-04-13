@@ -244,18 +244,18 @@
     flex-grow: 1;
     flex-shrink: 0;
     border: solid 1px #474747;
+    overflow: hidden;
     border-radius: .25rem;
   }
 
   &__image {
-    height: 10rem;
     padding: 1rem;
+    background: #ffffff;
     border-bottom: 1px solid #474747;
 
     img {
-      object-fit: contain;
       width: 100%;
-      height: 100%;
+      height: auto;
     }
   }
 
