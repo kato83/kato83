@@ -45,7 +45,7 @@ export default function Home() {
       <main>
         <section className={styles.mainVisual}>
           <Image src={'/mainvisual.svg'} alt="" width={1820} height={1080} className={styles.mainVisual__bgImage} />
-          <div className={`${styles.nameCard} ${deg === 180 ? styles.rotate : ''}`} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}>
+          <div className={`${styles.nameCard} ${deg % 360 === 180 ? styles.rotate : ''}`} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}>
             <h1 className={styles.nameCard__heading}>
               <ruby>加藤<rt lang='en'>Kato</rt></ruby><ruby className={styles.nameCard__lastName}>友樹<rt lang='en'>Yuki</rt></ruby>
             </h1>
@@ -94,7 +94,16 @@ export default function Home() {
             </div>
             <div className={styles.definition__item}>
               <dt><div>好きなこと</div></dt>
-              <dd>プログラミング, 読書, 自宅サーバー管理, etc.</dd>
+              <dd>プログラミング, 読書, ダーツ, 自宅サーバー管理, etc.</dd>
+            </div>
+            <div className={styles.definition__item}>
+              <dt><div>職歴</div></dt>
+              <dd>
+                <ul>
+                  <li>2018.04-2023.03 株式会社キノトロープ</li>
+                  <li>2023.07-現在 株式会社セキュアスカイ・テクノロジー</li>
+                </ul>
+              </dd>
             </div>
           </dl>
         </section>
@@ -118,6 +127,7 @@ export default function Home() {
             <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/typescript.webp' alt='typescript' width={250} height={404} /></div><div className={styles.card__text}><h3>TypeScript <small>(☆☆☆)</small></h3></div></div>
             <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/javascript.webp' alt='javascript' width={250} height={404} /></div><div className={styles.card__text}><h3>JavaScript <small>(☆☆☆)</small></h3></div></div>
             <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/html5.webp' alt='html5 & css' width={250} height={404} /></div><div className={styles.card__text}><h3>HTML & CSS <small>(☆☆)</small></h3></div></div>
+            <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/angular.webp' alt='angular' width={400} height={400} /></div><div className={styles.card__text}><h3>Angular <small>(☆☆☆)</small></h3></div></div>
             <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/react.webp' alt='react' width={250} height={404} /></div><div className={styles.card__text}><h3>React <small>(☆☆☆)</small></h3></div></div>
             <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/vue.webp' alt='vue' width={250} height={404} /></div><div className={styles.card__text}><h3>Vue.js <small>(☆☆)</small></h3></div></div>
             <div className={styles.card__item}><div className={styles.card__image}><Image src='/asset/sass.webp' alt='sass' width={250} height={404} /></div><div className={styles.card__text}><h3>Sass <small>(☆)</small></h3></div></div>

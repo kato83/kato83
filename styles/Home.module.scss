@@ -63,15 +63,17 @@
   }
 
   &.rotate::before {
-    background-color: #fff;
+    background-color: #ffdbca;
     transform: skewX(30deg);
     border-radius: 0 0 50% 50%;
+    box-shadow: 3px -3px 3px rgba(200, 200, 200, 0.767);
   }
 
   &.rotate::after {
-    background-color: #fff;
+    background-color: #ffdbca;
     transform: skewX(-30deg);
     border-radius: 0 0 50% 50%;
+    box-shadow: -3px -3px 3px rgba(200, 200, 200, 0.767);
   }
 
   @media screen and (max-width: 20rem) {
@@ -235,8 +237,8 @@
 }
 
 .card {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: .5rem;
 
   &__item {
@@ -249,8 +251,8 @@
   }
 
   &__image {
-    padding: 1rem;
     background: #ffffff;
+    padding: 2rem;
     border-bottom: 1px solid #474747;
 
     img {
