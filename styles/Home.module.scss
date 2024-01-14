@@ -45,13 +45,15 @@
 
   &::before,
   &::after {
-    transition: all ease .5s;
+    border-width: 0;
+    transition: all ease 1.5s;
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: -10rem;
     width: 5rem;
-    height: 5rem;
+    height: 4rem;
+    border-radius: 0 0 50% 50%;
   }
 
   &::before {
@@ -63,16 +65,24 @@
   }
 
   &.rotate::before {
-    background-color: #ffdbca;
+    top: 0;
+    background-color: #ffe8de;
+    border: solid 0 #ffdbca;
+    border-top-width: 1rem;
+    border-left-width: .5rem;
+    border-right-width: .5rem;
     transform: skewX(30deg);
-    border-radius: 0 0 50% 50%;
     box-shadow: 3px -3px 3px rgba(200, 200, 200, 0.767);
   }
 
   &.rotate::after {
-    background-color: #ffdbca;
+    top: 0;
+    background-color: #ffe8de;
+    border: solid 0 #ffdbca;
+    border-top-width: 1rem;
+    border-left-width: .5rem;
+    border-right-width: .5rem;
     transform: skewX(-30deg);
-    border-radius: 0 0 50% 50%;
     box-shadow: -3px -3px 3px rgba(200, 200, 200, 0.767);
   }
 
