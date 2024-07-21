@@ -137,7 +137,7 @@ export default function Home() {
           <div className={styles.card}>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siOpenjdk.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siOpenjdk.hex}`}>
                   <path d={siOpenjdk.path} />
                 </svg>
               </div>
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siScala.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siScala.hex}`}>
                   <path d={siScala.path} />
                 </svg>
               </div>
@@ -153,7 +153,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siPhp.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siPhp.hex}`}>
                   <path d={siPhp.path} />
                 </svg>
               </div>
@@ -161,7 +161,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siMysql.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siMysql.hex}`}>
                   <path d={siMysql.path} />
                 </svg>
               </div>
@@ -169,7 +169,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siDocker.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siDocker.hex}`}>
                   <path d={siDocker.path} />
                 </svg>
               </div>
@@ -177,7 +177,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siSpringboot.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siSpringboot.hex}`}>
                   <path d={siSpringboot.path} />
                 </svg>
               </div>
@@ -185,7 +185,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siDrupal.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siDrupal.hex}`}>
                   <path d={siDrupal.path} />
                 </svg>
               </div>
@@ -193,7 +193,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siLaravel.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siLaravel.hex}`}>
                   <path d={siLaravel.path} />
                 </svg>
               </div>
@@ -201,7 +201,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siLinux.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siLinux.hex}`}>
                   <path d={siLinux.path} />
                 </svg>
               </div>
@@ -213,7 +213,7 @@ export default function Home() {
           <div className={styles.card}>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siTypescript.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siTypescript.hex}`}>
                   <path d={siTypescript.path} />
                 </svg>
               </div>
@@ -221,7 +221,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siJavascript.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siJavascript.hex}`}>
                   <path d={siJavascript.path} />
                 </svg>
               </div>
@@ -229,7 +229,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siHtml5.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siHtml5.hex}`}>
                   <path d={siHtml5.path} />
                 </svg>
               </div>
@@ -237,7 +237,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siAngular.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siAngular.hex}`}>
                   <path d={siAngular.path} />
                 </svg>
               </div>
@@ -245,7 +245,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siTailwindcss.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siTailwindcss.hex}`}>
                   <path d={siTailwindcss.path} />
                 </svg>
               </div>
@@ -253,7 +253,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siReact.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siReact.hex}`}>
                   <path d={siReact.path} />
                 </svg>
               </div>
@@ -261,7 +261,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siVuedotjs.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siVuedotjs.hex}`}>
                   <path d={siVuedotjs.path} />
                 </svg>
               </div>
@@ -269,7 +269,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siSass.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siSass.hex}`}>
                   <path d={siSass.path} />
                 </svg>
               </div>
@@ -277,7 +277,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siWebpack.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siWebpack.hex}`}>
                   <path d={siWebpack.path} />
                 </svg>
               </div>
@@ -285,7 +285,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siJquery.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siJquery.hex}`}>
                   <path d={siJquery.path} />
                 </svg>
               </div>
@@ -293,7 +293,7 @@ export default function Home() {
             </div>
             <div className={styles.card__item}><div className={styles.card__tag}>🌟🌟</div>
               <div className={styles.card__image}>
-                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siPug.hex};`}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill={`#${siPug.hex}`}>
                   <path d={siPug.path} />
                 </svg>
               </div>
