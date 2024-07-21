@@ -9,6 +9,7 @@
   --background-color: #c7e9b0;
   --bark-accent-color: #b3c99c;
   --base-color: #a4bc92;
+  font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 ::selection {
@@ -25,7 +26,6 @@ body {
   color: #474747;
   background-color: #fdfdfd;
   animation: fadeIn 2s ease 0s 1 normal;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 @keyframes fadeIn {

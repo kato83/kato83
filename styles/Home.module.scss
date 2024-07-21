@@ -115,6 +115,7 @@
       margin-left: auto;
       display: flex;
       justify-content: flex-end;
+      align-self: flex-end;
       cursor: pointer;
 
       img {
@@ -176,7 +177,7 @@
       margin: 0 .5rem .5rem 0;
       background-color: var(--background-color);
       padding: .25rem .5rem;
-      font-weight: bold;
+      font-weight: 700;
       text-align: justify;
       text-align-last: justify;
       text-justify: inter-character;
@@ -264,21 +265,26 @@
 
   &__tag {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -1px;
+    left: -1px;
     z-index: 1;
-    background: var(--background-color);
-    padding: .125rem .5rem;
+    border: solid 1px #474747;
+    padding: .125rem .5rem .125rem calc(.5rem - .125rem);
+    letter-spacing: -.125rem;
     border-radius: 0 0 .25rem 0;
   }
 
   &__image {
     background: #ffffff;
-    padding: 2rem;
     border-bottom: 1px solid #474747;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
 
-    img {
+    svg {
       width: 100%;
+      max-width: 4rem;
       height: auto;
     }
   }
