@@ -99,6 +99,8 @@ export default function Home() {
             </div>
           </Modal>
           <h1 className={styles.heading}>About</h1>
+          <p>東京電子専門学校 ウェブ・メディア科卒業の後、2018年度より株式会社キノトロープでアシスタントバックエンドエンジニアとして新卒入社し、バックエンド開発をメインとしつつ、社内リソースに応じて適宜フロントエンドの業務や AWS 上での環境構築業務を担当。</p>
+          <p>2023年度より株式会社セキュアスカイ・テクノロジーへ転職し、サービスプロダクト開発全般の業務を受け持つ。</p>
           <dl className={styles.definition}>
             <div className={styles.definition__item}>
               <dt><div>出生</div></dt>
@@ -128,8 +130,6 @@ export default function Home() {
               </dd>
             </div>
           </dl>
-          <p>東京電子専門学校 ウェブ・メディア科卒業の後、2018年度より株式会社キノトロープでアシスタントバックエンドエンジニアとして新卒入社し、バックエンド開発をメインとしつつ、社内リソースに応じて適宜フロントエンドの業務や AWS 上での環境構築業務を担当。</p>
-          <p>2023年度より株式会社セキュアスカイ・テクノロジーへ転職し、サービスプロダクト開発全般の業務を受け持つ。</p>
         </section>
         <section className={styles.section}>
           <h1 className={styles.heading}>Skils</h1>
