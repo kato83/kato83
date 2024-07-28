@@ -20,8 +20,11 @@
     user-select: none;
     position: absolute;
     inset: 0;
+    object-fit: cover;
     height: 100%;
-    width: 100%;
+    width: auto;
+    margin: auto;
+    max-width: 100%;
   }
 }
 
