@@ -73,6 +73,7 @@ export default function Home() {
             </h1>
             <div className={styles.nameCard__meta}>
               <div className={styles.nameCard__qr}>
+                <button onClick={onClick} onTransitionEnd={end} className={styles.nameCardRotate} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
                 <Image src={'/qr.svg'} alt="QRコード" width={123} height={123} onClick={openQrCode} />
               </div>
               <div><FontAwesomeIcon title='Blog' icon={faGlobe} style={{ width: '1.25rem' }} />
@@ -84,7 +85,6 @@ export default function Home() {
                 {' '}<a href="https://twitter.com/http_kato83" target='_blank' rel='noopener'>@http_kato83</a></div>
             </div>
           </div>
-          <button onClick={onClick} onTransitionEnd={end} className={styles.nameCardRotate} style={{ transform: `rotate(${deg}deg)`, transition: deg === 0 ? 'none' : undefined }}><FontAwesomeIcon title='名刺を回転する' icon={faRotate} style={{ width: '1.5rem' }} /></button>
         </section>
         <section className={styles.section}>
           <Modal>
