@@ -42,7 +42,8 @@
   justify-content: flex-end;
   position: relative;
   writing-mode: vertical-rl;
-  animation: fadeIn 2s ease 0s 1 normal;
+  opacity: 0;
+  animation: fadeIn 2s ease 1s 1 forwards;
   overflow: hidden;
   transition: all ease .5s;
 
@@ -99,10 +100,11 @@
 
   @keyframes fadeIn {
     0% {
-      top: 5rem;
+      top: 10rem;
     }
 
     100% {
+      opacity: 1;
       top: 0;
     }
   }
@@ -119,9 +121,9 @@
       display: flex;
       justify-content: flex-end;
       align-self: flex-end;
-      cursor: pointer;
 
       img {
+        cursor: pointer;
         display: block;
         border-radius: .25rem;
         background-color: #fff;
@@ -154,6 +156,7 @@
 }
 
 .nameCardRotate {
+  align-self: center;
   color: #474747;
   position: relative;
   padding: .5rem;
